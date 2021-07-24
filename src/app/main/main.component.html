@@ -1,0 +1,45 @@
+<div>
+    <div class="filter filter-style" style="vertical-align: top;">
+        <p style="padding-left: 10px;"><b>Filters</b></p>
+        <p style="text-align: center; font-size: small;">Launch Year</p>
+        <hr class="hr">
+        <div style="margin-left: 7%; justify-content: start;">
+            <button [id]="id+1" [routerLink]='"year/"+year' class="btn-style" (click)="getYearlySpaceXDetails(year, id)"
+                *ngFor="let year of years; let id = index">{{year}}</button>
+        </div>
+
+        <p style="text-align: center; font-size: small;">Successful Launch</p>
+        <hr class="hr">
+        <div style="margin-left: 7%; justify-content: start;">
+            <button class="btn-style" (click)="getFilteredLaunchSpaceXDetails(true)">True</button>
+            <button class="btn-style" (click)="getFilteredLaunchSpaceXDetails(false)">False</button>
+        </div>
+        <p style="text-align: center; font-size: small;">Succesful Landing</p>
+        <hr class="hr">
+        <div style="margin-left: 7%; justify-content: start;">
+            <button class="btn-style" (click)="getFilteredLaunchAndLandSpaceXDetails(true)">True</button>
+            <button class="btn-style" (click)="getFilteredLaunchAndLandSpaceXDetails(false)">False</button>
+        </div>
+    </div>
+    <div class="tile-block">
+        <div *ngFor="let data of spaceXDetails; let idx = index"
+            style="vertical-align: top; height: auto; background-color: white; text-align: left; margin-bottom: 10px;"
+            class="col-2">
+            <div class="tile-bg-color">
+                <img class="align-image-center" [src]=data.links.mission_patch_small>
+            </div>
+            <div style="padding-left: 15px;">
+                <p style="color: rgb(82, 82, 150);"><b>{{data.mission_name}} #{{idx+1}}</b></p>
+                <span><b>Mission Ids: </b></span> <br>
+                <ul *ngFor="let id of data.mission_id">
+                    <li>{{id}}</li>
+                </ul>
+                <p><b>Launch Year:</b> {{data.launch_year}}</p>
+                <p><b>Successful Launch:</b> {{data.launch_success}}</p>
+                <p *ngIf="data.launch_failure_details"><b>Successful Landing:</b> {{false}}</p>
+                <p *ngIf="!data.launch_failure_details"><b>Successful Landing:</b> {{true}}</p>
+            </div>
+        </div>
+    </div>
+
+</div>
