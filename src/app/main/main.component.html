@@ -4,21 +4,21 @@
         <p style="text-align: center; font-size: small;">Launch Year</p>
         <hr class="hr">
         <div style="margin-left: 7%; justify-content: start;">
-            <button [id]="id+1" [routerLink]='"year/"+year' class="btn-style" (click)="getYearlySpaceXDetails(year, id)"
+            <button [id]="id+1" class="btn-style" (click)="getYearlySpaceXDetails(year, id)"
                 *ngFor="let year of years; let id = index">{{year}}</button>
         </div>
 
         <p style="text-align: center; font-size: small;">Successful Launch</p>
         <hr class="hr">
         <div style="margin-left: 7%; justify-content: start;">
-            <button class="btn-style" (click)="getFilteredLaunchSpaceXDetails(true)">True</button>
-            <button class="btn-style" (click)="getFilteredLaunchSpaceXDetails(false)">False</button>
+            <button class="btn-style" id="launch_true" (click)="getFilteredLaunchSpaceXDetails(true, 'launch_true')">True</button>
+            <button class="btn-style" id="launch_false" (click)="getFilteredLaunchSpaceXDetails(false, 'launch_false')">False</button>
         </div>
         <p style="text-align: center; font-size: small;">Succesful Landing</p>
         <hr class="hr">
         <div style="margin-left: 7%; justify-content: start;">
-            <button class="btn-style" (click)="getFilteredLaunchAndLandSpaceXDetails(true)">True</button>
-            <button class="btn-style" (click)="getFilteredLaunchAndLandSpaceXDetails(false)">False</button>
+            <button class="btn-style" id="land_true" (click)="getFilteredLandSpaceXDetails(true, 'land_true')">True</button>
+            <button class="btn-style" id="land_false" (click)="getFilteredLandSpaceXDetails(false, 'land_false')">False</button>
         </div>
     </div>
     <div class="tile-block">

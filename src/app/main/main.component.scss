@@ -8,7 +8,7 @@
 //     background-color: rgb(141, 206, 11);
 // }
 
-button:visited {
+button:hover {
     background-color: rgb(141, 206, 11);
 }
 
@@ -22,6 +22,7 @@ button:visited {
     margin-left: 5%;
     margin-bottom: 5%;
     opacity: 0.8;
+    cursor: pointer;
     // min-width: 40px;
     // max-width: 1%;
 }

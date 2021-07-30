@@ -4,7 +4,8 @@ import { AppComponent } from './app.component';
 
 
 const routes: Routes = [
-  {path: "year/:year", component: AppComponent }
+  {path: "all", component: AppComponent },
+  {path: "filter", component: AppComponent }
 ];
 
 @NgModule({
