@@ -8,4 +8,3 @@ Functionalities:
 Responsive Design:
   - The application UI is responsive according to the different screen sizes.
   - There is no css framework is used to make it responsive. The custom media query is used to make the application responsive for different screen sizes.
-  - 
