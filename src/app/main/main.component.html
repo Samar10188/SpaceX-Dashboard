@@ -4,7 +4,7 @@
         <p style="text-align: center; font-size: small;">Launch Year</p>
         <hr class="hr">
         <div style="margin-left: 7%; justify-content: start;">
-            <button [id]="id+1" class="btn-style" (click)="getYearlySpaceXDetails(year, id)"
+            <button [id]="year" class="btn-style" (click)="getYearlySpaceXDetails(year)"
                 *ngFor="let year of years; let id = index">{{year}}</button>
         </div>
 

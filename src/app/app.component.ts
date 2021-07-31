@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'SpaceX Dashboard';
+  constructor(private router: Router,
+              private route: ActivatedRoute) {}
+
+  ngOnInit() {
+    this.route.queryParams.subscribe((data)=>{
+      console.log('query', data);
+    })
+    this.router.navigate([''])
+  }
 }
