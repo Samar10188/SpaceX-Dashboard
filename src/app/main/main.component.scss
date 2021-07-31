@@ -69,6 +69,21 @@ button:hover {
     }
 }
 
+.footer {
+    background-color: black;
+    position: sticky;
+    bottom: 0px;
+    width: 99.2%;
+}
+
+.footerpapa {
+    background-color: rgba(253, 252, 252, 0.938);
+    opacity: 1;
+    height: 30px;
+    vertical-align: bottom;
+    padding-top: 20px;
+}
+
 @media screen and (min-width: 1024px) and (max-width: 1440px){
     .col-2{
         height: 200px;
