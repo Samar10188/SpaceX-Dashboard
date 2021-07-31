@@ -15,6 +15,6 @@ export class AppComponent {
     this.route.queryParams.subscribe((data)=>{
       console.log('query', data);
     })
-    this.router.navigate([''])
+    this.router.navigate(['all'])
   }
 }
