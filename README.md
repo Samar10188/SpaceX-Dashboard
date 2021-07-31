@@ -1,4 +1,4 @@
-# Test-App
+# SpaceX Dashboard
 
 Functionalities:
   - As per the requirement, the filters are implemented in a toogle way so that user can use it as a switch.
